@@ -1,6 +1,12 @@
 {
-  "parser": "babel-eslint",
-  "extends": "eslint:recommended",
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+  ],
+  "plugins": ["@typescript-eslint", "react", "prettier"],
   "env": {
     "commonjs": true,
     "es6": true,
@@ -20,8 +26,9 @@
   "rules": {
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "linebreak-style": ["error", "unix"],
-    "no-console": 0,
+    "no-console": 1,
     "quotes": ["error", "single"],
-    "semi": ["error", "always"]
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "always"],
   }
 }

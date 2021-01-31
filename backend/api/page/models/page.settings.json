@@ -38,10 +38,7 @@
     },
     "status": {
       "type": "enumeration",
-      "enum": [
-        "published",
-        "draft"
-      ],
+      "enum": ["published", "draft"],
       "default": "draft",
       "required": true
     }

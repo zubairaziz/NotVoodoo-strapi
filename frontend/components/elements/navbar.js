@@ -1,20 +1,16 @@
-import { useState } from "react";
-import Link from "next/link";
-import PropTypes from "prop-types";
-import { MdMenu } from "react-icons/md";
-import MobileNavMenu from "./mobile-nav-menu";
-import ButtonLink from "./button-link";
-import Image from "./image";
-import {
-  mediaPropTypes,
-  linkPropTypes,
-  buttonLinkPropTypes,
-} from "utils/types";
-import { getButtonAppearance } from "utils/button";
-import CustomLink from "./custom-link";
+import { useState } from 'react'
+import Link from 'next/link'
+import PropTypes from 'prop-types'
+import { MdMenu } from 'react-icons/md'
+import MobileNavMenu from './mobile-nav-menu'
+import ButtonLink from './button-link'
+import Image from './image'
+import { mediaPropTypes, linkPropTypes, buttonLinkPropTypes } from 'utils/types'
+import { getButtonAppearance } from 'utils/button'
+import CustomLink from './custom-link'
 
 const Navbar = ({ navbar }) => {
-  const [mobileMenuIsShown, setMobileMenuIsShown] = useState(false);
+  const [mobileMenuIsShown, setMobileMenuIsShown] = useState(false)
 
   return (
     <>
@@ -56,7 +52,7 @@ const Navbar = ({ navbar }) => {
             <div className="hidden md:block">
               <ButtonLink
                 button={navbar.button}
-                appearance={getButtonAppearance(navbar.button.type, "light")}
+                appearance={getButtonAppearance(navbar.button.type, 'light')}
                 compact
               />
             </div>
@@ -72,8 +68,8 @@ const Navbar = ({ navbar }) => {
         />
       )}
     </>
-  );
-};
+  )
+}
 
 Navbar.propTypes = {
   navbar: PropTypes.shape({
@@ -81,6 +77,6 @@ Navbar.propTypes = {
     links: PropTypes.arrayOf(linkPropTypes),
     button: buttonLinkPropTypes,
   }),
-};
+}
 
-export default Navbar;
+export default Navbar

@@ -1,11 +1,11 @@
-import { NextSeo } from "next-seo";
-import PropTypes from "prop-types";
-import { getStrapiMedia } from "utils/media";
-import { mediaPropTypes } from "utils/types";
+import { NextSeo } from 'next-seo'
+import PropTypes from 'prop-types'
+import { getStrapiMedia } from 'utils/media'
+import { mediaPropTypes } from 'utils/types'
 
 const Seo = ({ metadata }) => {
   // Prevent errors if no metadata was set
-  if (!metadata) return null;
+  if (!metadata) return null
 
   return (
     <NextSeo
@@ -23,7 +23,7 @@ const Seo = ({ metadata }) => {
               url: getStrapiMedia(image.url),
               width: image.width,
               height: image.height,
-            };
+            }
           }),
         }),
       }}
@@ -33,8 +33,8 @@ const Seo = ({ metadata }) => {
         ...(metadata.twitterUsername && { cardType: metadata.twitterUsername }),
       }}
     />
-  );
-};
+  )
+}
 
 Seo.propTypes = {
   metadata: PropTypes.shape({
@@ -44,6 +44,6 @@ Seo.propTypes = {
     twitterCardType: PropTypes.string,
     twitterUsername: PropTypes.string,
   }),
-};
+}
 
-export default Seo;
+export default Seo

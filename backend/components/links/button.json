@@ -18,10 +18,7 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "primary",
-        "secondary"
-      ]
+      "enum": ["primary", "secondary"]
     }
   }
 }
